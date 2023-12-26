@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg-pattern {
+  background-color: #000000;
+  background-image: url('/topography.svg')
+}
