@@ -1,4 +1,4 @@
-import Message from "@/components/Message";
+import Message from "@/components/MessageItem";
 import { authUserSession } from "../libs/auth.libs";
 import Link from "next/link";
 import {
@@ -7,7 +7,6 @@ import {
   InstagramLogo,
   LinkSimple,
 } from "@phosphor-icons/react/dist/ssr";
-import BaseButton from "@/components/Buttons/BaseButton";
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
 import SecondaryButton from "@/components/Buttons/SecondaryButton";
 
