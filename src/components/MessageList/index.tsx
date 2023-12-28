@@ -8,9 +8,14 @@ const MessageList = async () => {
     console.log(currentUser)
     if (!currentUser) return;
     const messages = await prisma.message.findMany({
+      orderBy: [
+        {
+          createdAt: 'desc',
+        },
+      ],
         where: {
             userId: currentUser.id,
-        },
+        }
     });
     return <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
       {
