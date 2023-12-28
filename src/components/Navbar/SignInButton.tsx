@@ -7,9 +7,9 @@ const SignInButton = async () => {
   return (
     <>
       {user ? (
-        <BaseLink href="/api/auth/signout">Signed as {user?.name}</BaseLink>
+        <BaseLink className="text-underline" href="/api/auth/signout">Logout</BaseLink>
       ) : (
-        <BaseLink href="/api/auth/signin">Sign In</BaseLink>
+        <BaseLink className="text-underline" href="/api/auth/signin">Sign In</BaseLink>
       )}
     </>
   );
