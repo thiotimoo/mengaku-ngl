@@ -14,9 +14,11 @@ const MessageList = async () => {
     });
     return <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
       {
+        messages.length ?
         messages.map((message, index) => {
           return <MessageItem key={message.id} {...message} />;
-        })
+        }) :
+        <p className="text-center p-6 bg-neutral-500">Belum ada apa-apa disini...</p>
       }
     </div>;
 };

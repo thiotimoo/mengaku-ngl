@@ -1,6 +1,7 @@
 import React from "react";
 import prisma from "@/libs/prisma";
 import MessageForm from "@/components/MessageForm";
+import NotFound from "@/app/not-found";
 
 interface PageProps {
     params: {
@@ -18,7 +19,7 @@ const Page: React.FC<PageProps> = async ({ params }) => {
     });
 
     
-    if (!targetUser) return <>User Not Found!</>
+    if (!targetUser) return <NotFound/>
     return (
         <div className="flex flex-col max-w-screen-sm m-auto w-full min-h-full p-6 gap-4 justify-center items-center">
             <MessageForm targetUser={targetUser}/>

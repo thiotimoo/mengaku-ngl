@@ -32,8 +32,7 @@ export default async function Home() {
                     ) : (
                         <PrimaryButton
                             href="/api/auth/signin"
-                            children="Ayo Coba"
-                        />
+                        >Ayo Coba</PrimaryButton>
                     )}
                 </div>
             </section>
