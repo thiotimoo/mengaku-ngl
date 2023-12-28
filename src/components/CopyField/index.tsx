@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import PrimaryButton from "../Buttons/PrimaryButton";
-import { Check, Copy } from "@phosphor-icons/react/dist/ssr";
+import { Check, CheckCircle, Copy } from "@phosphor-icons/react/dist/ssr";
 
 interface Props {
     text: string;
@@ -23,23 +23,23 @@ const CopyField: React.FC<Props> = ({ text }) => {
     };
     return (
         <button className="w-full"onClick={copyToClipboard}>
-            <Card className="p-6 hover:bg-neutral-700 transition-all cursor-pointer ">
+            <div className="p-6 hover:bg-green-200 bg-green-400 text-black rounded-lg transition-all cursor-pointer ">
                 <div className="flex flex-row items-center">
                     <div className="w-full flex-1">
-                    <p className="w-full text-sm font-bold text-left text-green-400">Bagikan link ini ke teman-temanmu!</p>
-                    <p className="w-full text-xl text-left">{text}</p>
+                    <p className="w-full text-sm font-bold text-left text-black">Bagikan link ini ke teman-temanmu!</p>
+                    <p className="w-full text-base text-left">{text}</p>
                     </div>
                     
                     {!copied ? (
-                        <Copy className="h-6 w-6" weight="bold" />
+                        <Copy className="p-2 h-12 w-12 fill-black" weight="bold" />
                     ) : (
-                        <Check
-                            className="h-6 w-6 fill-green-400"
+                        <CheckCircle
+                            className="p-2 h-12 w-12 fill-black"
                             weight="bold"
                         />
                     )}
                 </div>
-            </Card>
+            </div>
         </button>
     );
 };
