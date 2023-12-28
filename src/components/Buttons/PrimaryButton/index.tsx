@@ -7,7 +7,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({ ...buttonProps }) => {
         <BaseButton
             {...buttonProps}
             className={
-                "font-bold bg-yellow-500 text-black hover:bg-yellow-100 ring-yellow-600 " +
+                "font-bold bg-green-500 text-black hover:bg-green-100 ring-green-600 " +
                 buttonProps.className
             }
         />

@@ -1,9 +1,9 @@
-import { authUserSession } from "@/libs/auth.libs";
+import { getUserSession } from "@/libs/auth.libs";
 import BaseLink from "@/components/Buttons/BaseLink";
 import React from "react";
 
 const SignInButton = async () => {
-  const user = await authUserSession();
+  const user = await getUserSession();
   return (
     <>
       {user ? (

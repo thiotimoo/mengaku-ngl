@@ -20,11 +20,7 @@ const Page: React.FC<PageProps> = async ({ params }) => {
     
     if (!targetUser) return <>User Not Found!</>
     return (
-        <div className="flex flex-col max-w-screen-sm m-auto w-full min-h-full p-6 gap-3 justify-center">
-            <h3 className="font-semibold text-3xl">mengaku ke</h3>
-            <h3 className="font-medium text-lg bg-white text-black w-max px-1">
-                {targetUser?.name}
-            </h3>
+        <div className="flex flex-col max-w-screen-sm m-auto w-full min-h-full p-6 gap-4 justify-center items-center">
             <MessageForm targetUser={targetUser}/>
         </div>
     );
